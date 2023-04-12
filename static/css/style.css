@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+/* NAV BAR */
+.nav-pc{
+    display: flex;
+    background-color: black;
+}
+
+.nav-pc li a{
+    color: white;
+}
+
+.right-li{
+    float: right;
+}
+
+/* NAV BAR *//* FIN */
