@@ -7,16 +7,16 @@ loader.load('./3d/scene.gltf', function (gltf) {
   scene.add(gltf.scene);
 
   // Positionnement de l'objet
-  gltf.scene.position.set(-2, -1, -5);
+  gltf.scene.position.set(0, 0, 0);
 
   // Initialisation de l'interface graphique
   const gui = new dat.GUI();
 
   // Contrôle de la position de l'objet
   const position = gui.addFolder('Position');
-  position.add(gltf.scene.position, 'x', -20, 10);
-  position.add(gltf.scene.position, 'y', -20, 10);
-  position.add(gltf.scene.position, 'z', -20, 10);
+  position.add(gltf.scene.position, 'x', -100, 10);
+  position.add(gltf.scene.position, 'y', -100, 10);
+  position.add(gltf.scene.position, 'z', -100, 10);
   position.open();
 
 
@@ -37,9 +37,11 @@ loader.load('./3d/scene.gltf', function (gltf) {
 });
 
 // Création de la caméra
-const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 15;
-camera.position.y = 4;
+const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 3;
+camera.position.y = 200;
+camera.position.x = 0;
+camera.lookAt(scene.position);
 
 // Création des lumières
 const ambientLight = new THREE.AmbientLight(0xffffff, .4);
@@ -87,3 +89,19 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+// // Récupération du conteneur parent
+// const container = document.getElementsByClassName('scene3d');
+
+// // Redimensionnement du canvas
+// function resizeCanvas() {
+//   const width = container.clientWidth;
+//   const height = container.clientHeight;
+//   renderer.setSize(width, height);
+//   camera.aspect = width / height;
+//   camera.updateProjectionMatrix();
+// }
+
+// // Appel de la fonction resizeCanvas au chargement et au redimensionnement de la fenêtre
+// window.addEventListener('load', resizeCanvas);
+// window.addEventListener('resize', resizeCanvas);
