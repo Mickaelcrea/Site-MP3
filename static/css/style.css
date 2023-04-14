@@ -4,7 +4,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    color: black;
 }
 
 /* NAV BAR */
@@ -22,3 +21,26 @@
 }
 
 /* NAV BAR *//* FIN */
+
+/* Prez 1 */
+.prez-1{
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+.prez-1 article {
+    width: 50%;
+}
+
+/* Prez 1 *//* FIN */
+
+/* Prez 2 */
+.prez-2{
+    height: 100vh;
+    background-color: white;
+    color: black;
+}
+.prez-2 article {
+    width: 50%;
+}
+/* Prez 2 *//* FIN */
