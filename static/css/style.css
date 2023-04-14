@@ -31,8 +31,12 @@
 .prez-1 article {
     width: 50%;
 }
-
+/*3D */
+.scene3d {
+    background: radial-gradient(#e66465, #9198e5);
+}
 /* Prez 1 *//* FIN */
+/*3D */
 
 /* Prez 2 */
 .prez-2{
