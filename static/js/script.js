@@ -38,9 +38,9 @@ loader.load('./3d/scene.gltf', function (gltf) {
 });
 
 // Création de la caméra
-const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 3;
-camera.position.y = 200;
+const camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 40;
+camera.position.y = 0;
 camera.position.x = 0;
 camera.lookAt(scene.position);
 
@@ -49,6 +49,19 @@ const ambientLight = new THREE.AmbientLight(0xffffff, .4);
 scene.add(ambientLight);
 
 const pointLight1 = new THREE.PointLight(0xffffff);
+pointLight1.position.set(0, 10, 0); // positionne la lumière en haut de la scène
+scene.add(pointLight1);
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(1, 1, 1);
+scene.add(directionalLight);
+
+const spotLight = new THREE.SpotLight(0xffffff, 0.5);
+spotLight.position.set(0, 10, 0);
+spotLight.target.position.set(0, 0, 0);
+scene.add(spotLight);
+scene.add(spotLight.target);
+
 
 // Initialisation du rendu
 const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#canvas') });
