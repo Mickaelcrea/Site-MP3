@@ -1,6 +1,7 @@
 // Initialisation de la scène
 const scene = new THREE.Scene();
 
+
 // Chargement de l'objet 3D
 const loader = new THREE.GLTFLoader();
 loader.load('./3d/scene.gltf', function (gltf) {
@@ -90,18 +91,3 @@ window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// // Récupération du conteneur parent
-// const container = document.getElementsByClassName('scene3d');
-
-// // Redimensionnement du canvas
-// function resizeCanvas() {
-//   const width = container.clientWidth;
-//   const height = container.clientHeight;
-//   renderer.setSize(width, height);
-//   camera.aspect = width / height;
-//   camera.updateProjectionMatrix();
-// }
-
-// // Appel de la fonction resizeCanvas au chargement et au redimensionnement de la fenêtre
-// window.addEventListener('load', resizeCanvas);
-// window.addEventListener('resize', resizeCanvas);

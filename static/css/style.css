@@ -35,6 +35,11 @@
 /*3D */
 .scene3d {
     background: radial-gradient(closest-side, #d9d9d9, #d9d9d900, #d9d9d900);
+    /* width: 100%;
+    margin-left: 50px; */
+}
+#canvas{
+    margin-left: -50%;
 }
 /* Prez 1 *//* FIN */
 /*3D */
@@ -49,7 +54,3 @@
     width: 50%;
 }
 /* Prez 2 *//* FIN */
-#canvas {
-    width: 100%;
-    height: 100%;
-}
