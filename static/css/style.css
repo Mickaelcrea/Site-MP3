@@ -4,7 +4,17 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    cursor: none;
 }
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+p {
+    font-family: 'Exo 2', sans-serif;
+  }
+  
 
 /* NAV BAR */
 
@@ -87,7 +97,7 @@
 .Harty {
     display: flex;
     flex-direction: column;
-    padding: 259px 0px 0px 96px;
+    padding: 259px 3% 0px 96px;
   }
   
   .Harty h2 {
@@ -127,13 +137,29 @@
   
     /*3D */
     .scene3d {
-        background: radial-gradient(closest-side, #d9d9d9, #d9d9d900, #d9d9d900);
+        background: radial-gradient(closest-side, #d9d9d9, #d9d9d971, #d9d9d900);
         overflow-y: hidden;
         overflow-x: hidden;
         padding-top: 200px;
         /* width: 100%;
         margin-left: 50px; */
     }
+      
+      /* @keyframes smoke {
+        0% {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1.5);
+        }
+      } */
+      
     #canvas{
         margin-left: -50%;
     }
@@ -150,3 +176,27 @@
     width: 50%;
 }
 /* Prez 2 *//* FIN */
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: electric 1s ease-in-out infinite;
+    pointer-events: none;
+  }
+ 
+  
+  @keyframes electric {
+    0% {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #4af;
+    }
+    100% {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 70px #4af;
+    }
+  }
+  

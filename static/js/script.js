@@ -8,32 +8,32 @@ loader.load('./3d/scene.gltf', function (gltf) {
   scene.add(gltf.scene);
 
   // Positionnement de l'objet
-  gltf.scene.position.set(0, 0, 0);
+  gltf.scene.position.set(0, -5, 0);
 
-  // Initialisation de l'interface graphique
-  const gui = new dat.GUI();
+//   // Initialisation de l'interface graphique
+//   const gui = new dat.GUI();
 
-  // Contrôle de la position de l'objet
-  const position = gui.addFolder('Position');
-  position.add(gltf.scene.position, 'x', -100, 10);
-  position.add(gltf.scene.position, 'y', -100, 10);
-  position.add(gltf.scene.position, 'z', -100, 10);
-  position.open();
+//   // Contrôle de la position de l'objet
+//   const position = gui.addFolder('Position');
+//   position.add(gltf.scene.position, 'x', -100, 10);
+//   position.add(gltf.scene.position, 'y', -100, 10);
+//   position.add(gltf.scene.position, 'z', -100, 10);
+//   position.open();
 
 
-    // Contrôle de la rotation de l'objet
-    const rotation = gui.addFolder('Rotation');
-    rotation.add(gltf.scene.rotation, 'x', -10, 10);
-    rotation.add(gltf.scene.rotation, 'y', -10, 10);
-    rotation.add(gltf.scene.rotation, 'z', -10, 10);
-    rotation.open();
+//     // Contrôle de la rotation de l'objet
+//     const rotation = gui.addFolder('Rotation');
+//     rotation.add(gltf.scene.rotation, 'x', -10, 10);
+//     rotation.add(gltf.scene.rotation, 'y', -10, 10);
+//     rotation.add(gltf.scene.rotation, 'z', -10, 10);
+//     rotation.open();
   
-  // Contrôle de la taille de l'objet
-  const scale = gui.addFolder('Scale');
-  scale.add(gltf.scene.scale, 'x', 0, 2);
-  scale.add(gltf.scene.scale, 'y', 0, 2);
-  scale.add(gltf.scene.scale, 'z', 0, 2);
-  scale.open();
+//   // Contrôle de la taille de l'objet
+//   const scale = gui.addFolder('Scale');
+//   scale.add(gltf.scene.scale, 'x', 0, 2);
+//   scale.add(gltf.scene.scale, 'y', 0, 2);
+//   scale.add(gltf.scene.scale, 'z', 0, 2);
+//   scale.open();
   
 });
 
@@ -61,6 +61,7 @@ spotLight.position.set(0, 10, 0);
 spotLight.target.position.set(0, 0, 0);
 scene.add(spotLight);
 scene.add(spotLight.target);
+
 
 
 // Initialisation du rendu
@@ -102,5 +103,58 @@ window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+
+// Cette fonction affiche progressivement le contenu d'un élément HTML
+const texte = document.getElementById('texte1').innerHTML;
+let i = 0;
+document.getElementById('texte1').innerHTML = '';
+
+setInterval(function() {
+  if (i < texte.length) {
+    document.getElementById('texte1').innerHTML += texte.charAt(i);
+    i++;
+  }
+}, 5);
+
+
+
+//  // SOURIS
+// const cursor = document.querySelector(".cursor");
+
+// document.addEventListener("mousemove", (e) => {
+//   cursor.style.left = e.clientX + "px";
+//   cursor.style.top = e.clientY + "px";
+// });
+
+// document.querySelectorAll(".hoverable").forEach((el) => {
+//   el.addEventListener("mouseenter", () => {
+//     cursor.classList.add("hover");
+//   });
+//   el.addEventListener("mouseleave", () => {
+//     cursor.classList.remove("hover");
+//   });
+// });
+
+
+const cursor = document.querySelector('.cursor');
+const particles = [];
+
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.pageX + 'px';
+  cursor.style.top = e.pageY + 'px';
+  
+  for (let i = 0; i < 5; i++) {
+    const particle = document.createElement('span');
+    particle.classList.add('particle');
+    particles.push(particle);
+    document.body.appendChild(particle);
+  }
+  
+  particles.forEach((particle, index) => {
+    particle.style.left = e.pageX + index + 'px';
+    particle.style.top = e.pageY + index + 'px';
+  });
 });
 
