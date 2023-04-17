@@ -11,10 +11,33 @@ h2 {
   font-weight: bold;
 }
 
+
 p {
     font-family: 'Exo 2', sans-serif;
   }
   
+  .cursor {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #00ccff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: electric 1s ease-in-out infinite;
+    pointer-events: none;
+  }
+ 
+  
+  @keyframes electric {
+    0% {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #4af;
+    }
+    100% {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 70px #4af;
+    }
+  }
 
 /* NAV BAR */
 
@@ -80,6 +103,9 @@ p {
     background-color: #613d22;
   }
   
+  .nav-pc li a{
+    font-family: 'Raleway', sans-serif;
+}
     /* NAV BAR *//* FIN */
     
     /* Prez 1 */
@@ -177,26 +203,4 @@ p {
 }
 /* Prez 2 *//* FIN */
 
-.cursor {
-    width: 20px;
-    height: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #fff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: electric 1s ease-in-out infinite;
-    pointer-events: none;
-  }
- 
-  
-  @keyframes electric {
-    0% {
-      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #4af;
-    }
-    100% {
-      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 70px #4af;
-    }
-  }
-  
+/* Nouveau */ 
