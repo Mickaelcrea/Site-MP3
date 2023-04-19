@@ -120,41 +120,36 @@ setInterval(function() {
 
 
 
-//  // SOURIS
-// const cursor = document.querySelector(".cursor");
+// Transition de page
+const contactLink = document.querySelector('#contact-link');
 
-// document.addEventListener("mousemove", (e) => {
-//   cursor.style.left = e.clientX + "px";
-//   cursor.style.top = e.clientY + "px";
-// });
+contactLink.addEventListener('click', function (event) {
+  event.preventDefault(); // Empêche le comportement de lien par défaut
 
-// document.querySelectorAll(".hoverable").forEach((el) => {
-//   el.addEventListener("mouseenter", () => {
-//     cursor.classList.add("hover");
-//   });
-//   el.addEventListener("mouseleave", () => {
-//     cursor.classList.remove("hover");
-//   });
-// });
+  // Crée un nouvel élément DIV avec une classe pour l'animation
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
 
+  // Ajoute la couleur d'arrière-plan noire, la propriété z-index élevée et la position relative à l'élément body
+  document.body.style.backgroundColor = "#000000";
+  document.body.style.transition = "background-color 2s ease";
+  document.body.style.position = "relative";
+  document.body.style.zIndex = "1000000";
+  document.body.style.display = "block";
+  document.body.appendChild(overlay);
 
-const cursor = document.querySelector('.cursor');
-const particles = [];
+  // Obtenez la hauteur totale de la page
+  var height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.pageX + 'px';
-  cursor.style.top = e.pageY + 'px';
-  
-  for (let i = 0; i < 5; i++) {
-    const particle = document.createElement('span');
-    particle.classList.add('particle');
-    particles.push(particle);
-    document.body.appendChild(particle);
-  }
-  
-  particles.forEach((particle, index) => {
-    particle.style.left = e.pageX + index + 'px';
-    particle.style.top = e.pageY + index + 'px';
-  });
+  // Obtenez la largeur totale de la page
+  var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+  // Modifiez la taille de la div overlay en utilisant les dimensions calculées
+  overlay.style.width = width + "px";
+  overlay.style.height = height + "px";
+
+  // Redirige l'utilisateur vers la nouvelle page après la transition
+  setTimeout(function () {
+    window.location.href = "contact.html";
+  }, 2000);
 });
-
