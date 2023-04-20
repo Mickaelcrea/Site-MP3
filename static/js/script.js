@@ -131,25 +131,21 @@ contactLink.addEventListener('click', function (event) {
   overlay.classList.add('overlay');
 
   // Ajoute la couleur d'arrière-plan noire, la propriété z-index élevée et la position relative à l'élément body
-  document.body.style.backgroundColor = "#000000";
-  document.body.style.transition = "background-color 2s ease";
-  document.body.style.position = "relative";
-  document.body.style.zIndex = "1000000";
-  document.body.style.display = "block";
+  document.body.style.overflow = "hidden"
+  overlay.style.background = "transparent";
+  overlay.style.transition = "background-color 0.5s ease";
+  overlay.style.position = "absolute";
+  overlay.style.zIndex = "1000000";
+  overlay.style.display = "block";
+  overlay.style.width = "400vh";
   document.body.appendChild(overlay);
 
-  // Obtenez la hauteur totale de la page
-  var height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
-  // Obtenez la largeur totale de la page
-  var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-
-  // Modifiez la taille de la div overlay en utilisant les dimensions calculées
-  overlay.style.width = width + "px";
-  overlay.style.height = height + "px";
-
+  
+  setTimeout(function() {
+    overlay.style.backgroundColor = "black";
+  }, 500);
   // Redirige l'utilisateur vers la nouvelle page après la transition
   setTimeout(function () {
-    window.location.href = "contact.html";
-  }, 2000);
+    window.location.href = "transition_arg.html";
+  }, 1000);
 });

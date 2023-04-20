@@ -1,0 +1,71 @@
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+a, h3{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
+#background-image {
+  background-image: url(/static/image/act1.png);
+  background-size: cover;
+  filter: blur(65px);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+
+
+#image-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#image-container img {
+  width: 60vh;
+}
+
+#text-container {
+  text-align: center;
+  padding: 20px;
+}
+
+#text-container h4 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#text-container p {
+  font-size: 1.2em;
+}
+
+
+#button-container{
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    background-color: white;
+    padding: 5%;
+  }
+  a .button:hover h3{
+    border-bottom-color: #000000;
+  }

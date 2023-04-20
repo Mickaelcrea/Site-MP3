@@ -1,0 +1,28 @@
+body {
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #loading-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 9999;
+  }
+  
+  #texte1, #texte2 {
+    font-size: clamp(7rem, 2.5vw, 2rem); 
+    font-weight: bold;
+    padding: 5%;
+    text-align: center;
+  }
+  
