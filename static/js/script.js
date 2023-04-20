@@ -142,7 +142,7 @@ contactLink.addEventListener('click', function (event) {
 
   
   setTimeout(function() {
-    overlay.style.backgroundColor = "black";
+    overlay.style.backgroundColor = "#161617";
   }, 500);
   // Redirige l'utilisateur vers la nouvelle page après la transition
   setTimeout(function () {
