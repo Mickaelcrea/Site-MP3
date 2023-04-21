@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
             clearTimeout(idTO)
         }
         
-        if(champ.value !== '2258') {
+        if(champ.value !== '0246') {
             idTO = setTimeout((p) => { // set timeout
                 
                 console.log("Time out : " + p); // voir le time out
