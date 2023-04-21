@@ -1,0 +1,155 @@
+
+
+body {
+    background: #161617;
+    color: white;
+    font-family: 'SF Pro Display';
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+  }
+  a, h3{
+      color: #161617;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: 'SF Pro Display';
+      border-bottom: 3px solid transparent;
+      transition: border-bottom-color 0.3s ease-in-out;
+  }
+  .maze1 #background-image{
+    background-image: url(/static/image/act1.png);
+  }
+  .maze2 #background-image{
+    background-image: url(/static/image/act2_neg.png);
+    }
+    
+    .maze3 #background-image{
+    background-image: url(/static/image/act3.png);
+    }
+    
+    .maze4 #background-image{
+    background-image: url(/static/image/act4.png);
+    }
+    
+    .maze5 #background-image{
+    background-image: url(/static/image/act5.png);
+    }
+    
+    .maze6 #background-image{
+    background-image: url(/static/image/act6.png);
+    }
+    
+    .maze7 #background-image{
+    background-image: url(/static/image/act7.png);
+    }
+    
+    .maze8 #background-image{
+    background-image: url(/static/image/act8.png);
+    }
+    
+    .mazefin #background-image{
+    background-image: url(/static/image/act9.png);
+    }
+    
+  
+  #background-image {
+    background-size: cover;
+    filter: blur(65px) invert(0%);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  
+  #image-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #image-container img {
+    width: 60vh;
+  }
+  
+  canvas{
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  #acttransi {
+    width: 100%;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  
+  #text-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #text-container h4 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #text-container p {
+    font-size: 1.2em;
+  }
+  
+  
+  #button-container{
+      width: 30vh;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .direction {
+      background-color: white;
+      padding: 5%;
+    }
+    a .direction:hover h3{
+      border-bottom-color: #161617;
+    }
+.row2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row2 #clickable-div{
+    width: 50%;
+}
+
+#lunetteuse{
+    background-color: rgb(41, 41, 41);
+    cursor: pointer;
+}
+#lunetteuse h4{
+    color: yellowgreen;
+    font-family: 'SF Pro Display';
+}
+
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid black;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    filter: invert(1);
+    -webkit-mask-image: url('/static/image/maze1A.png');
+    mask-image: (url('/static/image/maze1A.png'), rgb(0, 0, 0));;
+    mask-repeat: no-repeat;
+    display: none;
+  }
+  #canvas1{display: none;}

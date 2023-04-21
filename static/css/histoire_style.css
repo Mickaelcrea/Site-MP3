@@ -2,7 +2,7 @@
 
 body {
   background: #161617;
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: 'SF Pro Display';
   margin: 0;
   padding: 0;
@@ -22,8 +22,7 @@ a, h3{
   background-image: url(/static/image/act1.png);
 }
 .page2 #background-image{
-  background-image: url(/static/image/act2.png);
-  filter: blur(65px) invert(0%);
+  background-image: url(/static/image/act2_neg.png);
   }
   
   .page3 #background-image{
@@ -50,38 +49,20 @@ a, h3{
   background-image: url(/static/image/act8.png);
   }
   
-  .page9 #background-image{
-  background-image: url(/static/image/act9.png);
-  }
-  
-  .page10 #background-image{
-  background-image: url(/static/image/act10.png);
-  }
-  
-  .page11 #background-image{
-  background-image: url(/static/image/act11.png);
-  }
-  
-  .page12 #background-image{
-  background-image: url(/static/image/act12.png);
-  }
-  
-  .page13 #background-image{
-  background-image: url(/static/image/act13.png);
-  }
-  
-  .page14 #background-image{
-  background-image: url(/static/image/act14.png);
-  }
-  
-  .page15 #background-image{
-  background-image: url(/static/image/act15.png);
-  }
+  .page16 #background-image{
+    background-image: url(/static/image/mazefin.png);
+    }
+    .page17 #background-image{
+      background-image: url(/static/image/generateur.png);
+      }
+        .page19 #background-image{
+          background-image: url(/static/image/porte.png);
+          }
 
 
 #background-image {
   background-size: cover;
-  filter: blur(65px);
+  filter: blur(65px) invert(0%);
   height: 100%;
   left: 0;
   position: fixed;
@@ -132,9 +113,18 @@ a, h3{
 }
 
 .button {
-    background-color: white;
+    background-color: rgb(234, 234, 234);
     padding: 5%;
   }
   a .button:hover h3{
     border-bottom-color: #161617;
   }
+  
+  .page18 #background-image{
+    background-image: url(/static/image/nononon.png);
+    filter: inherit;
+    }
+  
+#countdown{
+  color: red;
+}

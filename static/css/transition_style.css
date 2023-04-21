@@ -1,6 +1,6 @@
 
 body {
-    background: #161617;
+  background-color: #161617;
     color: white;
     font-family: 'SF Pro Display';
     margin: 0;
@@ -19,11 +19,22 @@ body {
     background-color: #161617;
     z-index: 9999;
   }
-  
+  .oeil{
+    background-image: url(/static/image/oeil.png);
+  }
   #texte1, #texte2 {
     font-size: clamp(7rem, 2.5vw, 2rem); 
     font-weight: bold;
     padding: 5%;
     text-align: center;
   }
-  
+
+  #finbody{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  #finbody img{
+    width: 100%;
+  }
